@@ -1,0 +1,28 @@
+CREATE TABLE `invoice_details` (
+  `business_code` CHAR(4) DEFAULT NULL,
+  `cust_number` VARCHAR(255) DEFAULT NULL,
+  `name_customer` VARCHAR(255) DEFAULT NULL,
+  `clear_date` DATETIME DEFAULT NULL,
+  `business_year` YEAR(4) DEFAULT NULL,
+  `doc_id` BIGINT(11) NOT NULL,
+  `posting_date` DATE DEFAULT NULL,
+  `document_create_date` DATE DEFAULT NULL,
+  `due_in_date` DATE DEFAULT NULL,
+  `sales_order_currency` CHAR(3) DEFAULT NULL,
+  `document_type` CHAR(2) DEFAULT NULL,
+  `posting_id` TINYINT(4) DEFAULT NULL,
+  `area_business` VARCHAR(255) DEFAULT NULL,
+  `total_open_amount` DOUBLE DEFAULT NULL,
+  `baseline_create_date` DATE DEFAULT NULL,
+  `cust_payment_terms` CHAR(4) DEFAULT NULL,
+  `sales_order_id` BIGINT(11) DEFAULT NULL,
+  `isOpen` TINYINT(4) DEFAULT NULL,
+  PRIMARY KEY (`doc_id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8;
+
+
+
+TRUNCATE TABLE invoice_details;
+DESC `invoice_details`;
+SELECT * FROM invoice_details;
+SELECT COUNT(*) FROM `invoice_details`;
